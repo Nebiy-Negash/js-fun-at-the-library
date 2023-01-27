@@ -10,6 +10,9 @@
 // Initialize two new variables, "title", and "pages", and assign values to them with
 // a book's title and page count.
 
+const title = 'Harry Potter';
+let pageCount = 763;
+
 // var title = "Harry Potter";
 // var ...
 
@@ -20,20 +23,24 @@
 // of what it currently is 
 
 
+pageCount *= (3/4);
+console.log(pageCount)
+
 
 // Initialize a new variable "movie", but leave it undefined
 
-
+let movie;
 
 // Create a variable named "sequel", and assign it to a be a sequel of your
 // book (made up or not!). Your sequel must make use of your "title" variable from above
 
-
+const sequel = `${title} 2`
+console.log(sequel)
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the book you chose is your favorite book or not
 
-
+let isFavorite = true;
 
 
 // Create a new variable named "isShortStory", and use a comparison operator to
@@ -41,7 +48,15 @@
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
-
+let isShortStory;
+const pages = 21;
+// if (pages < 25) {
+//   isShortStory = true
+// } else {
+//   isShortStory = false
+// }
+pages < 25 ? isShortStory = true : isShortStory = false;
+console.log(isShortStory)
 
 //------------------------- Conditionals -------------------------//
 
@@ -51,13 +66,20 @@
 // 'Ok, maybe I could read that in a day and a half'
 
 
+pageCount < 1000 ? console.log('I could read that in a day') : console.log('Ok, maybe I could read that in a day and a half')
+
 
 // Express the following in code: If the variable "isFavorite" is true,
 // log the statement 'My favorite book is [title]!'. Otherwise, log the
 // statement 'I recently read the [title] book'. In either case, the value stored in
 // the "title" variable should be included in the logged statement.
 
-
+// isFavorite = false
+if (isFavorite) {
+  console.log(`My favorite book is ${title}`)
+} else {
+  console.log(`I recently read the ${title} book`)
+}
 
 //------------------------- Arrays -------------------------//
 
@@ -65,17 +87,25 @@
 // Create a new variable "books" and assign it to an Array of 5 different
 // book titles, represented by their names as Strings.
 
+const books = ['Harry Potter', 'Red Shadow', '48 Laws of power', 'HIBT', 'Minds of gold']
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
+function thirdEle() {
+  return console.log(books[2])
+}
+thirdEle()
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
 
+const belowTwoHundred =[ 86, 77, 83, 27, 79, 96, 67, 75, 52, 21 , 199, 150]
+
 
 // Write the code to access the 5th element of the array, using bracket notation.
 
+console.log(belowTwoHundred[4])
 
 //------------------------- Objects -------------------------//
 
@@ -83,6 +113,14 @@
 // keys: name, and hasThesaurus. The value for name should the string 'Webster's', and
 // the value for hasThesaurus should be false
 
+const dictionary = {
+  name: "Webster's",
+  hasThesaurus: false
+}
+
 
 // Write the code to add the key of pageCount, with the value of 720. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+dictionary.pageCount = 720;
+console.log(dictionary)
